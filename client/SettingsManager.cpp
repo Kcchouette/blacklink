@@ -47,8 +47,7 @@ static const char HUBLIST_SERVERS_DEFAULT[] =
 	"https://dchublist.org/hublist.xml.bz2;"
 	"https://dchublist.ru/hublist.xml.bz2;"
 	"https://dchublists.com/?do=hublist&get=hublist.xml.bz2;"
-	"https://tankafett.biz/?do=hublist&get=hublist.xml.bz2;"
-	"http://hublist.eu/hublist.xml.bz2";
+	"https://tankafett.biz/?do=hublist&get=hublist.xml.bz2";
 
 static const char COMPRESSED_FILES_DEFAULT[] = "*.bz2;*.zip;*.rar;*.7z;*.gz;*.mp3;*.ogg;*.flac;*.ape;*.mp4;*.mkv;*.jpg;*.jpeg;*.gif;*.png;*.docx;*.xlsx";
 
@@ -1429,7 +1428,7 @@ void SettingsManager::load(const string& aFileName)
 	{
 		//dcassert(0);
 	}
-	catch (const SimpleXMLException&) // TODO Битый конфиг XML https://crash-server.com/Problem.aspx?ProblemID=15638
+	catch (const SimpleXMLException&) // TODO пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ XML https://crash-server.com/Problem.aspx?ProblemID=15638
 	{
 		dcassert(0);
 	}
@@ -1475,7 +1474,7 @@ void SettingsManager::load(const string& aFileName)
 	if (SETTING(DHT_KEY).length() != 39 || CID(SETTING(DHT_KEY)).isZero())
 		set(DHT_KEY, CID::generate().toBase32());
 
-	//удалить через несколько релизов
+	//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	if (strstr(get(TEMP_DOWNLOAD_DIRECTORY).c_str(), "%[targetdir]\\") != 0)
 		set(TEMP_DOWNLOAD_DIRECTORY, "");
 		
@@ -1654,7 +1653,7 @@ bool SettingsManager::set(StrSetting key, const std::string& value)
 #undef REDUCE_LENGTH
 	}
 	
-	if (valueAdjusted) // Если параметр изменили в момент загрузки - ставим маркер что нужно записаться обратно в файл.
+	if (valueAdjusted) // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ.
 	{
 		isSet[key] = true;
 	}
