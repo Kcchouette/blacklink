@@ -46,8 +46,7 @@ static const char HUBLIST_SERVERS_DEFAULT[] =
 	"https://dchublist.biz/?do=hublist&get=hublist.xml.bz2;"
 	"https://dchublist.org/hublist.xml.bz2;"
 	"https://dchublist.ru/hublist.xml.bz2;"
-	"https://dchublists.com/?do=hublist&get=hublist.xml.bz2;"
-	"https://tankafett.biz/?do=hublist&get=hublist.xml.bz2";
+	"https://dchublists.com/?do=hublist&get=hublist.xml.bz2";
 
 static const char COMPRESSED_FILES_DEFAULT[] = "*.bz2;*.zip;*.rar;*.7z;*.gz;*.mp3;*.ogg;*.flac;*.ape;*.mp4;*.mkv;*.jpg;*.jpeg;*.gif;*.png;*.docx;*.xlsx";
 
